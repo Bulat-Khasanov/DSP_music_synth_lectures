@@ -1,1 +1,9 @@
-void app_main() {}
+#include "debug_led.h"
+
+void app_main() 
+{
+    debugLedInit();
+
+    debugLedSet();
+}
+

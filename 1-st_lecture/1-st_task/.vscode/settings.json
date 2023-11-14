@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "esp_system.h": "c",
+        "sdkconfig.h": "c",
+        "soc_caps.h": "c",
+        "gpio_hal.h": "c",
+        "gpio.h": "c",
+        "gpio_types.h": "c",
+        "io_mux_reg.h": "c",
+        "debug_led.h": "c",
+        "assert.h": "c"
+    }
+}
