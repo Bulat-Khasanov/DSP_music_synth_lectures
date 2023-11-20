@@ -38,4 +38,4 @@ do {                                 \
     }                                \
 } while (0)                          \
 
-#endif
+#endif /* debug_led.h */

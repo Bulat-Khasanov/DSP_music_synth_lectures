@@ -1,6 +1,6 @@
 #include "debug_led.h"
+
 #include "driver/gpio.h"
-#include "hal/gpio_types.h"
 
 void debugLedInit(void)
 {

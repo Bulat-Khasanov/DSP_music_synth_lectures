@@ -8,6 +8,17 @@
         "gpio_types.h": "c",
         "io_mux_reg.h": "c",
         "debug_led.h": "c",
-        "assert.h": "c"
-    }
+        "assert.h": "c",
+        "uart.h": "c",
+        "uart_hal.h": "c",
+        "uart_types.h": "c",
+        "uart_ll.h": "c",
+        "misc.h": "c",
+        "clk_tree_defs.h": "c",
+        "esp_log.h": "c",
+        "string.h": "c",
+        "main.h": "c",
+        "debug_uart.h": "c"
+    },
+    "cmake.configureOnOpen": false
 }
