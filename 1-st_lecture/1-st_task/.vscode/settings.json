@@ -18,7 +18,12 @@
         "esp_log.h": "c",
         "string.h": "c",
         "main.h": "c",
-        "debug_uart.h": "c"
+        "debug_uart.h": "c",
+        "unity.h": "c",
+        "signal_gen.h": "c",
+        "stdio.h": "c",
+        "stddef.h": "c",
+        "esp_types.h": "c"
     },
     "cmake.configureOnOpen": false
 }
