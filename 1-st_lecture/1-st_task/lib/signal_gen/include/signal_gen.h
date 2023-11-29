@@ -2,7 +2,8 @@
  * This module allows for sequentially returning elements of an array, collectively 
  * representing a cyclic musical signal.
 */
-#include "esp_types.h"
+//#include <esp_types.h>
+#include <stdint.h>
 
 /**
  * In this macro, the number of states that the DAC of this device can take is recorded.
