@@ -4,5 +4,5 @@ static uint8_t indx = 0;
 
 uint8_t getOneElementOfSignal(void)
 {
-    return signal[indx++];
+    return preGenSignal[indx++];
 }

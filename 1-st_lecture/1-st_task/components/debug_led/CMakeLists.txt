@@ -1,3 +1,0 @@
-idf_component_register(SRCS "debug_led.c"
-                       INCLUDE_DIRS "include"
-                       PRIV_REQUIRES driver)
