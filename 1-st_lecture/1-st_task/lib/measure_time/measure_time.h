@@ -1,3 +1,5 @@
+#ifndef MEASURE_TIME_H
+#define MEASURE_TIME_H
 /**
  * This module allows measuring time during certain actions. This way, 
  * one can measure how long it takes to execute, for example, a function.
@@ -18,3 +20,5 @@ extern uint64_t startTimeCount(gptimer_handle_t *GPTimer_handler);
  * @return The number of timer counts that have elapsed since the timer was started.
 */
 extern uint64_t endTimeCount(gptimer_handle_t *GPTimer_handler);
+
+#endif /* measure_time.h */
