@@ -3,12 +3,17 @@
 #include <stdio.h>
 #include "measure_time.h"
 
+/* A value representing a certain number of test runs of the signal. */
 #define SEVERAL_TIMES 12
 
+/** The macro contains the number of counts of a timer operating at a frequency of 10 MHz,
+ *  corresponding to the maximum simple target function in C, multiplied by 10 just in case. */
 #define TEN_TIMES_MY_FUNCTION_TIME 10*30
 
+/* The function fills the passed array with the signal. */
 static void getSignalExample(uint8_t arr[]);
 
+/* A line in which messages about failed asserts are output during the execution of tests. */
 static char msg[256] = {0};
 
 static void getSignalExample(uint8_t arr[])
@@ -31,6 +36,7 @@ void tearDown(void)
 
 }
 
+/* The test checks the repeatability of the signal. */
 void test_isSignalRepeats(void)
 {
     uint8_t readSig[DAC_RESOLUTION];
@@ -46,6 +52,7 @@ void test_isSignalRepeats(void)
     }
 }
 
+/* The test checks the repeatability of the signal several times. */
 void test_isSignalRepeatsSeveralTimes(void)
 {
     uint8_t readSig[DAC_RESOLUTION];
@@ -65,6 +72,7 @@ void test_isSignalRepeatsSeveralTimes(void)
     }
 }
 
+/* The test checks whether the target function takes too long to execute. */
 void test_isFunctionComputingTimeToleratable(void)
 {
     gptimer_handle_t gptimer = NULL;
