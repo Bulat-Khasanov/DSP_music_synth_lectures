@@ -23,7 +23,9 @@
         "signal_gen.h": "c",
         "stdio.h": "c",
         "stddef.h": "c",
-        "esp_types.h": "c"
+        "esp_types.h": "c",
+        "esp_clk_tree.h": "c",
+        "gptimer.h": "c"
     },
     "cmake.configureOnOpen": false
 }

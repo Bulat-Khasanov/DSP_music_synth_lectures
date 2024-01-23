@@ -2,7 +2,6 @@
  * This module allows for sequentially returning elements of an array, collectively 
  * representing a cyclic musical signal.
 */
-//#include <esp_types.h>
 #include <stdint.h>
 
 /**
