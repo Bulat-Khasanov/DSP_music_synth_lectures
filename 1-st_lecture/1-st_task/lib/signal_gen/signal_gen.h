@@ -1,3 +1,5 @@
+#ifndef SIGNAL_GEN_H
+#define SIGNAL_GEN_H
 /**
  * This module allows for sequentially returning elements of an array, collectively 
  * representing a cyclic musical signal.
@@ -23,3 +25,4 @@ static uint8_t preGenSignal[DAC_RESOLUTION] = {255, 254, 253, 252, 251, 250, 249
  * will start transmitting it from the beginning.
 */
 extern uint8_t getOneElementOfSignal();
+#endif
