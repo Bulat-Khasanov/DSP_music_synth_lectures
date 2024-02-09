@@ -1,14 +1,16 @@
 #include "signal_gen.h"
 #include "unity.h"
 #include <stdio.h>
-#include "measure_time.h"
+#include "esp_cpu.h"
 
 /* A value representing a certain number of test runs of the signal. */
 #define SEVERAL_TIMES 12
 
-/** The macro contains the number of counts of a timer operating at a frequency of 10 MHz,
- *  corresponding to the maximum simple target function in C, multiplied by 10 just in case. */
-#define TEN_TIMES_MY_FUNCTION_TIME 10*30
+/**
+ * The macro contains the number of processor cycles required to process the 
+ * simplest target function in C.
+*/
+#define OPTIMAL_TIME 1934
 
 /* The function fills the passed array with the signal. */
 static void getSignalExample(uint8_t arr[]);
@@ -75,14 +77,13 @@ void test_isSignalRepeatsSeveralTimes(void)
 /* The test checks whether the target function takes too long to execute. */
 void test_isFunctionComputingTimeToleratable(void)
 {
-    gptimer_handle_t gptimer = NULL;
-    uint64_t start, end;
-    clock_t toleratableTime = TEN_TIMES_MY_FUNCTION_TIME;
-    clock_t realTime = 0;
+    esp_cpu_cycle_count_t start, end;
+    esp_cpu_cycle_count_t toleratableTime = 3 * OPTIMAL_TIME; 
+    esp_cpu_cycle_count_t realTime = 0;
 
-    start = startTimeCount(&gptimer);
+    start = esp_cpu_get_cycle_count();
     getOneElementOfSignal();
-    end = endTimeCount(&gptimer);
+    end = esp_cpu_get_cycle_count();
     realTime = end - start;
 
     sprintf(msg, "Function computing time is not toleratable, it's greater than %ld", toleratableTime);
